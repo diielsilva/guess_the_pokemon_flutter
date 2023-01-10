@@ -135,10 +135,17 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
+                              Container(
+                                margin: const EdgeInsets.all(10),
+                                child: Image.asset(
+                                  'assets/images/congrats.png',
+                                  width: 120,
+                                ),
+                              ),
                               Text(
-                                'Parabéns, você é um treinador Pokémon e obeteve um total de ${service.pointsStore.points.value} pontos',
-                                style: const TextStyle(
-                                    fontSize: 20, color: Colors.green),
+                                'Total de Pontos: ${service.pointsStore.points.value}',
+                                style: const TextStyle(fontSize: 20),
+                                textAlign: TextAlign.justify,
                               ),
                               Container(
                                 width: 200,
@@ -162,10 +169,17 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
+                              Container(
+                                margin: const EdgeInsets.all(10),
+                                child: Image.asset(
+                                  'assets/images/game-over.png',
+                                  width: 120,
+                                ),
+                              ),
                               Text(
-                                'Que pena, você perdeu, mas obeteve um total de ${service.pointsStore.points.value} pontos',
-                                style: const TextStyle(
-                                    fontSize: 20, color: Colors.red),
+                                'Total de Pontos: ${service.pointsStore.points.value}',
+                                style: const TextStyle(fontSize: 20),
+                                textAlign: TextAlign.justify,
                               ),
                               Container(
                                 width: 200,
