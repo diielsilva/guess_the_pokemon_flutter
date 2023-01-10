@@ -88,9 +88,9 @@ class PokemonService {
   }
 
   void buyTries() {
-    if (pointsStore.points.value >= 100) {
+    if (pointsStore.points.value >= 1000) {
       triesStore.remainingTries.value++;
-      pointsStore.points.value -= 100;
+      pointsStore.points.value -= 1000;
     }
   }
 
